@@ -10,3 +10,7 @@ class PreparateurCommande(Employe):
             return self.salaire_fixe * 1.1
         else:
             return self.salaire_fixe * 1.
+    
+
+if __name__ == "__main__":
+    pass

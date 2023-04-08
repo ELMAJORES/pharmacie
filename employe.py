@@ -7,3 +7,7 @@ class Employe:
 
     def __str__(self):
         return f"{self.nom}, {self.prenom}, {self.adresse}, {self.salaire_fixe}"
+    
+
+if __name__ == "__main__":
+    pass

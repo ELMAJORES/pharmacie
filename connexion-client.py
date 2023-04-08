@@ -14,6 +14,7 @@ class connexion_client(object):
 
 
 
-connexion = connexion_client("tlemcani","abdelhak")
 
-print(connexion.connect())
+if __name__ == "__main__":
+	connexion = connexion_client("tlemcani","abdelhak")
+	print(connexion.connect())

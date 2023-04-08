@@ -15,3 +15,7 @@ class ResponsablePharmacie(Employe):
             return 500
         else:
             return 1000
+
+
+if __name__ == "__main__":
+    pass

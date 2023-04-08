@@ -15,3 +15,5 @@ class Produit:
 
     def __str__(self):
         return f"{self.nom_generique}, {self.produit_type}, {self.prix_achat}, {self.prix_vente}, {self.date_peremption}"
+if __name__ == "__main__":
+    pass

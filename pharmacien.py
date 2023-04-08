@@ -5,3 +5,5 @@ class Pharmacien(Employe):
     def calculer_prime(self, chiffre_affaires):
         return chiffre_affaires * 0.01
 
+if __name__ == "__main__":
+    pass
