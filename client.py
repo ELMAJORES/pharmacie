@@ -1,4 +1,5 @@
 import csv
+
 class Client(object):
 	def __init__(self, nom = "xxx",prenom = "xxx", age = "xx"):
 		self.nom = nom
@@ -8,9 +9,8 @@ class Client(object):
 	def connect(self, path):
 		reader = csv.DictReader(open(path))
 		for raw in reader:
-			if raw["nom"] == self.nom and raw["prenom"] == self.prenom:
+			if raw["nom"] == self.nom and raw["prenom"] == self.prenom:  
 				return True
-
 		return False
 		
 	def addClient(self,path):
@@ -21,10 +21,6 @@ class Client(object):
 
 
 
-
-
 if __name__ == "__main__":
 	connexion = Client("tlemcani","sa","16")
-	new_client = [{"nom" : ["tlemcani","bouazouni","mohand"],
-				   "prenom" : ["abdelhak","walid","mohamed"] }]
 	print(connexion.addClient(path = "resources/clients.csv"))
