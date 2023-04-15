@@ -5,6 +5,6 @@ class personne():
         self.prenom = prenom
         self.date_naissance = date_naissance
 
-    
+
 if __name__ == "__main__":
     print("yes")
