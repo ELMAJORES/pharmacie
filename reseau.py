@@ -9,6 +9,9 @@ class mastercard(reseau):
 
     def __init__(self):
         super().__init__("mastercard",0.5,1)
+
+    def getrembourssement(self,pays = "xx"):
+        return self.tauxRembourssement
     
 class visa(reseau):
     
@@ -23,10 +26,11 @@ class visa(reseau):
         }
         
         
-        
     def getrembourssement(self,pays):
-        return 1-self.paysRembourssement[pays]
+        return self.tauxRembourssement-self.paysRembourssement[pays]
+    
 if __name__ == "__main__":
-    vis = visa()
-    print(vis.getrembourssement("Royaume-Uni"))
+    master = mastercard()
+    print(master.getrembourssement("Royaume-Uni"))
+
 
