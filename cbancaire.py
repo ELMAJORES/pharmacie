@@ -30,6 +30,7 @@ class cbancaire():
 
         return total % 10 == 0
     
+
     def payer(self, montant):
         if not self.isValidCarte():
             print("Impossible de traiter le paiement. La carte bancaire est invalide.")
@@ -72,5 +73,7 @@ if __name__ == "__main__":
     cb2.payerFinMois()
     print(cb2.solde)
     print(cb2.portefeuilles)
+
+
 
 
