@@ -1,12 +1,14 @@
+from reseau import *
 class cbancaire():
     cbs = []
 
-    def __init__(self, nom="xx", proprietaire=None, num_carte="xx", exp="xx", cvc="xx"):
+    def __init__(self,reseau, nom="xx", proprietaire=None, num_carte="xx", exp="xx", cvc="xx"):
         self.nom = nom
         self.proprietaire = proprietaire
         self.num_carte = num_carte
         self.exp = exp
         self.cvc = cvc
+        self.reseau = reseau
 
     def isUniqueCarte(self, num_carte):
         if len(cbancaire.cbs) == 0:
@@ -25,6 +27,7 @@ class cbancaire():
         total = sum(subtracted_digits)
 
         return total % 10 == 0
+    
     def payer(self, montant):
         if not self.isValidCarte():
             print("Impossible de traiter le paiement. La carte bancaire est invalide.")
@@ -37,8 +40,11 @@ class cbancaire():
 
         print(f"Paiement de {montant} € effectué avec succès avec la carte bancaire {self.num_carte}.")
 
+    def remboursser(self,pays,prix):
+        return prix*self.reseau.getrembourssement(pays)
+    
 if __name__ == "__main__":
-    pass
-
+    cb = cbancaire( reseau = mastercard(),nom = "lcl",proprietaire = "eee",num_carte = '123121321123',exp = '12', cvc="13")
+    print(cb.remboursser("Espagne",15))
 
 

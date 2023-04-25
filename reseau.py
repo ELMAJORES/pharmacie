@@ -18,11 +18,11 @@ class visa(reseau):
     def __init__(self):
         super().__init__("visa", 0.25,1)
         self.paysRembourssement = {
-            "Espagne" : 0.10,
-            "Etats-Unis" : 0.20,
-            "Portugal" : 0.15,
-            "Royaume-Uni" : 0.25,
-            "Reste du monde" : 0.30
+            "Espagne" : 0.0010,
+            "Etats-Unis" : 0.0020,
+            "Portugal" : 0.0015,
+            "Royaume-Uni" : 0.0025,
+            "Reste du monde" : 0.0030
         }
         
         
